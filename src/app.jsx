@@ -4,7 +4,7 @@ import VideoList from './components/video_list/video_list';
 
 function App() {
   const [videos, setVideos] = useState([]);
-
+  const API_KEY = process.env.REACT_APP_API_KEY;
   useEffect(() => {
     const requestOptions = {
       method: 'GET',
@@ -12,7 +12,7 @@ function App() {
     };
 
     fetch(
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyDBaTsCN2V6FBhio0ef5Qr0kFCyjUflMfM',
+      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${API_KEY}`,
       requestOptions
     )
       .then((response) => response.json())
