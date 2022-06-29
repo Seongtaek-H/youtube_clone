@@ -1,6 +1,13 @@
 .container {
-  width: 50%;
   padding: 0.2em;
+}
+
+.container.gird {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
 }
 
 .video {
@@ -34,5 +41,5 @@
 }
 
 .channel {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
